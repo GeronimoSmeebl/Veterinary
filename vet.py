@@ -49,12 +49,11 @@ def get_training_horse():
 Bandage_Item_Id = 0x0E21
 Vet_Bandage_Color = 0x0871
 
-bandages_found = find_items([Bandage_Item_Id])
-
 horse = get_training_horse()
 
 while(horse != None):
     vet_bandages = None
+    bandages_found = find_items([Bandage_Item_Id])
 
     for item in bandages_found:
         if item.Hue == Vet_Bandage_Color:
